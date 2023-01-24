@@ -4,14 +4,17 @@
 
 const hamburger = document.querySelector('.hamburger');
 const navMenu = document.querySelector('.navMenu');
-const main = document.querySelector('main')
-const footer = document.querySelector('footer')
-const body = document.querySelector('body');
+const header = document.querySelector('.header')
 
 hamburger.addEventListener('click', () => {
     hamburger.classList.toggle('active');
-    body.classList.toggle('active');
     navMenu.classList.toggle('active');
-    main.classList.toggle('active');
-    footer.classList.toggle('active');
+    header.classList.toggle('active');
+
 })
+
+document.querySelectorAll('.navLink').forEach(n => n.addEventListener('click', () => {
+    hamburger.classList.remove('active');
+    navMenu.classList.remove('active');
+
+}))

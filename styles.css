@@ -13,11 +13,11 @@ font-family: 'Dosis', sans-serif;*/
     box-sizing: border-box;
 }
 
-body {
+
+.container {
     background-color: #F4F4F1;
-    -webkit-transition: 0.3s ease-in-out;
-    transition: 0.3s ease-in-out;
 }
+
 main, footer {
     -webkit-transition: 0.3s ease-in-out;
     transition: 0.3s ease-in-out;
@@ -164,9 +164,7 @@ header {
 /* ####### BREAKPOINTS ######## */
 
 @media screen and (max-width: 600px) {
-    body.active {
-        background-color: #F9EA31;
-    }
+   
     .hamburger{
         display: block;
     }
@@ -179,29 +177,33 @@ header {
     .hamburger.active .bar:nth-child(3) {
         transform: translateY(-8px) rotate(-45deg);
     }
+   
 
     .navMenu {
         position: fixed;
         top: 70px;
         left: -130%;
         width: 100%;
-        height: 500px;
         flex-direction: column;
         text-align: center;
         transition: 0.3s ease-in-out;
         background-color: #F9EA31;
+        gap: 0;
     }
     .navItem {
         margin: 16px 0;
     }
+  
     .navMenu.active {
         left: 0;
     }
 
     /* ####### MAIN ####### */
 
-    main.active, .footer.active {
-        opacity: 0;
-        /* transition: 0.3s ease-in-out; */
+   .header.active{
+        margin-top: 210px;
+    }
+    .header{
+        margin-top: 0;
     }
 }
