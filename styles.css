@@ -99,7 +99,7 @@ header {
 /* ######## MAIN ######## */
 
 .header {
-    background-image: url(./images/bg1.jpg);
+    background-image: url(./images/bg11.jpg);
     background-size: cover;
     background-position: center;
     min-height: 700px;
@@ -107,6 +107,22 @@ header {
     -webkit-transition: 0.3s ease-in-out;
     transition: 0.3s ease-in-out;
 }
+
+.fade {
+    -webkit-animation: 1.5s fade;
+    animation: 1.5s fade;
+}
+
+@-webkit-keyframes fade {
+    from{
+        opacity: 0.4;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+
 .background {
     background: rgb(0,0,0);
     background: rgba(0,0,0,0.5);
@@ -124,10 +140,35 @@ header {
 
 .centered h1 {
     font-size: 100px;
+    font-weight: lighter;
+    position: relative;
+    animation-name: heading1;
+    animation-duration: 3s;
+    animation-fill-mode: forwards;
+}
+@keyframes heading1 {
+    from{
+        top: -100px;
+    }
+    to {
+        top: 0px;
+    }
 }
 .centered p {
     font-size: 25px;
+    position: relative;
     margin: 20px 0;
+    animation-name: pheading;
+    animation-duration: 3s;
+    animation-fill-mode: forwards;
+}
+@keyframes pheading {
+    from {
+        left: -990px;
+    }
+    to {
+        left: 0px;
+    }
 }
 
 .centered h1, p {
@@ -136,13 +177,26 @@ header {
 
 .centered .btn {
     color: #3D0F0B;
-    background-color: #F4F4F1;
+    background-color: #F9EA31;
     font-size: 30px;
     border: 2px solid #3D0F0B;
-    border-radius: 15px;
+    border-radius: 13px;
     padding: 10px;
     transition: 0.3s;
     cursor: pointer;
+    opacity: 0;
+    animation-name: headingbtn;
+    animation-duration: 3s;
+    animation-delay: 3s;
+    animation-fill-mode: forwards;
+}
+@keyframes headingbtn {
+    from{
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
 }
 
 .centered .btn:hover {
@@ -205,5 +259,20 @@ header {
     }
     .header{
         margin-top: 0;
+    }
+
+    .centered h1 {
+        font-size: 80px;
+    }
+    .centered p {
+        font-size: 18px;
+        font-weight: bold;
+    }
+    .centered .btn {
+        font-size: 14px;
+        background-color: #F9EA31;
+    }
+    .centered .btn:hover {
+        color: #F9EA31;
     }
 }
