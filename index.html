@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Swahili</title>
+    <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
 
     <link rel="shortcut icon" type="image/jpg" href="./images/logo.jpg"/>
     <link rel="stylesheet" href="styles.css">
@@ -52,21 +53,60 @@
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore necessitatibus, dolores voluptas illo beatae laboriosam alias ex officiis quia incidunt ullam, modi nostrum error? Non illum atque alias excepturi quo.</p>
                     <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Rerum reiciendis cumque animi eveniet distinctio culpa eaque laborum, itaque quo laboriosam officia mollitia molestias eum repellendus optio, numquam doloribus voluptas harum?</p>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur blanditiis perspiciatis rerum libero nemo excepturi quisquam voluptates! Possimus labore expedita provident omnis enim, veniam porro nihil minus dicta vero velit.</p>
-                    <button class="btn">VIEW MENU</button>
+                   <a href="./about.html"><button class="btn">Read More</button></a> 
                 </div>
             </section>
             <!-- ### -->
             <section class="featured">
-                <h1>SPECIAL OFFER!</h1>
+                <h1  style="text-align: center;">SPECIAL OFFER!</h1>
                 <div class="food">
-                    <div class="food1"></div>
-                    <div class="food2"></div>
-                    <div class="food3"></div>
+                    <div class="food1 featured-food">
+                        <div class="f-img1"></div>
+                        <div class="f-content">
+                            <h5>Food1</h5>
+                            <p>Price: 500 <em>Ksh</em></p>
+                            <a href="#"><button class="btn1">Order Now</button></a>
+                            <a href="#"><button class="btn2">Add to Cart</button></a>
+                        </div>
+                    </div>
+                    <!-- ### -->
+                    <div class="food2 featured-food">
+                        <div class="f-img2"></div>
+                        <div class="f-content">
+                            <h5>Food1</h5>
+                            <p>Price: 1200 <em>Ksh</em></p>
+                            <a href="#"><button class="btn1">Order Now</button></a>
+                            <a href="#"><button class="btn2">Add to Cart</button></a>
+                        </div>
+                    </div>
+                    <!-- ### -->
+                    <div class="food3 featured-food">
+                        <div class="f-img3"></div>
+                        <div class="f-content">
+                            <h5>Food1</h5>
+                            <p>Price: 900 <em>Ksh</em></p>
+                            <a href="#"><button class="btn1">Order Now</button></a>
+                            <a href="#"><button class="btn2">Add to Cart</button></a>
+                        </div>
+                    </div>
+                    <!-- ### -->
+                    <div class="food3 featured-food">
+                        <div class="f-img4"></div>
+                        <div class="f-content">
+                            <h5>Food1</h5>
+                            <p>Price: 850 <em>Ksh</em></p>
+                            <a href="#"><button class="btn1">Order Now</button></a>
+                            <a href="#"><button class="btn2">Add to Cart</button></a>
+                        </div>
+                    </div>
                 </div>
                 <button class="btn">VIEW FULL MENU</button>
             </section>
+            <!-- ### -->
             <section class="reservation">
                 <form>
+                   <fieldset>
+                    <legend>RESERVATION</legend>
                     <div>
                         <label for="fnam">First Name</label>
                         <br>
@@ -87,7 +127,17 @@
                         <br>
                         <input type="tel" name="tel" id="" max="10" min="10" required>
                     </div>
-                    <input type="submit" value="Book">
+                    <div>
+                        <label for="date">Date</label><br>
+                        <input type="datetime-local" name="date" id="" required>
+                    </div>
+                    <div>
+                        <label for="people">Number of People</label><br>
+                        <input type="range" name="people" id="" min="1" max="10" required oninput="this.nextElementSibling.value = this.value">
+                        <output>4</output>
+                    </div>
+                    <input type="submit" class="form-btn" value="Book">
+                   </fieldset>
                 </form>
             </section>
         </main>
@@ -95,6 +145,7 @@
         <footer>
             <div class="footer-content">
                 <section class="navigation">
+                    <h3>PAGES</h3>
                     <ul>
                         <li><a href="index.html">HOME</a></li>
                         <li><a href="menu.html">MENU</a></li>
@@ -103,25 +154,27 @@
                 </section>
                 <!-- ### -->
                 <section class="contact">
+                    <h3>CONTACT</h3>
                     <ul>
-                        <li><a href="https://tel:+254773497954"> 0773 497954</a></li>
-                        <li><a href="https://tel:+254772 435765"> 0772 435765</a></li>
-                        <li><b>Addresses: </b><ol>
+                        <li> </i><a href="https://tel:+254773497954"> 0773 497954</a></li>
+                        <li> </i><a href="https://tel:+254772 435765"> 0772 435765</a></li>
+                        <li><b>Addresses: </b><ul>
                             <li><a href="https://goo.gl/maps/F6QRpafs2yBSzmeP9" target="_blank">Muindi Mbingu St, Nairobi </a></li>
                             <li><a href="https://goo.gl/maps/rH2PPASRm4JJdgzQ8" target="_blank">Sarit Centre, Parklands/Highridge </a></li>
-                        </ol></li>
+                        </ul></li>
                     </ul>
                 </section>
                 <!-- ### -->
                 <section class="social">
+                    <h3>SOCIALS</h3>
                     <ul>
-                        <li><a href="https://www.facebook.com/swahiliplate/" target="_blank">Facebook</a></li>
+                        <li> <a href="https://www.facebook.com/swahiliplate/" target="_blank">Facebook</a></li>
                         <li><a href="https://www.instagram.com/swahiliplate/?hl=en" target="_blank">Instagram</a></li>
                     </ul>
                 </section>
             </div>
-            <p>copyright &copy; All right reserved</p>
-            <p>Swahili Plate</p>
+            <p style="margin-top: 20px; padding: 20px;">copyright &copy; All right reserved</p>
+            <p style="margin-bottom: 20px; padding: 20px;">Swahili Plate</p>
         </footer>
     </div>
     
